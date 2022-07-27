@@ -17,7 +17,7 @@ export default function Information() {
 
   function showPosition(pos) {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=77ec14cf87a554fb9497d29c0b5f3891&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=&units=metric`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -61,7 +61,7 @@ export default function Information() {
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${City}${
         CountryCode != "" ? "," + CountryCode : ""
-      }&appid=77ec14cf87a554fb9497d29c0b5f3891&mode=json&units=metric`
+      }&appid=&mode=json&units=metric`
     )
       .then((response) => response.json())
       .then((data) => {
